@@ -1,0 +1,127 @@
+.page {
+  width: min(100% - 40px, 1120px);
+  margin: 0 auto;
+  padding: 48px 0 72px;
+  color: #233b38;
+  text-align: left;
+}
+
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #087f75;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.title {
+  margin: 0;
+  color: #173c37;
+  font-size: clamp(28px, 5vw, 40px);
+  font-weight: 650;
+  letter-spacing: 0;
+  line-height: 1.15;
+}
+
+.addButton {
+  display: inline-flex;
+  min-height: 44px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  padding: 0 17px;
+  border-radius: 6px;
+  background: #087f75;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    background 150ms ease,
+    transform 150ms ease;
+}
+
+.addButton:hover {
+  transform: translateY(-1px);
+  background: #066a62;
+}
+
+.addButton:focus-visible {
+  outline: 3px solid #80c9bd;
+  outline-offset: 3px;
+}
+
+.tableWrap {
+  overflow-x: auto;
+  border: 1px solid #e0ebe8;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 16px 40px rgba(27, 70, 63, 0.07);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.tableHead {
+  background: #f0f7f5;
+}
+
+.headingCell {
+  padding: 15px 20px;
+  color: #526a65;
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.status,
+.emptyState {
+  padding: 30px;
+  border: 1px dashed #cbdcd8;
+  border-radius: 8px;
+  background: #f8fbfa;
+  color: #52635f;
+  text-align: center;
+}
+
+.status {
+  width: min(100% - 40px, 1120px);
+  box-sizing: border-box;
+  margin: 48px auto;
+  text-align: left;
+}
+
+@media (max-width: 680px) {
+  .page {
+    width: min(100% - 32px, 1120px);
+    padding: 32px 0 48px;
+  }
+
+  .header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .addButton {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .headingCell {
+    padding: 13px 15px;
+  }
+}

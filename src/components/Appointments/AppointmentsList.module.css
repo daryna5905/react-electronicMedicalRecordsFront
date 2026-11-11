@@ -1,0 +1,78 @@
+:global(a[href='/appointments/newAppointment']) {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 20px;
+  padding: 0 17px;
+  border-radius: 6px;
+  background: #087f75;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 150ms ease;
+}
+
+:global(a[href='/appointments/newAppointment']:hover) {
+  background: #066a62;
+}
+
+:global(a[href='/appointments/newAppointment']:focus-visible) {
+  outline: 3px solid #80c9bd;
+  outline-offset: 3px;
+}
+
+:global(table:not([class])) {
+  width: 100%;
+  min-width: 640px;
+  border: 1px solid #e0ebe8;
+  border-spacing: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  color: #233b38;
+  box-shadow: 0 16px 40px rgba(27, 70, 63, 0.07);
+  text-align: left;
+  font-size: 15px;
+  line-height: 1.4;
+  border-collapse: separate;
+  table-layout: auto;
+}
+
+:global(table:not([class]) tr:first-child) {
+  background: #f0f7f5;
+  color: #526a65;
+  font-weight: 600;
+}
+
+:global(table:not([class]) td) {
+  padding: 14px 18px;
+  border-bottom: 1px solid #e0ebe8;
+  vertical-align: middle;
+}
+
+:global(table:not([class]) tr:not(:first-child) td:nth-child(3)) {
+  white-space: nowrap;
+}
+
+:global(table:not([class]) tr:last-child td) {
+  border-bottom: 0;
+}
+
+:global(table:not([class]) tr:not(:first-child):hover) {
+  background: #f8fbfa;
+}
+
+@media (max-width: 700px) {
+  :global(table:not([class])) {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    border-radius: 6px;
+  }
+
+  :global(table:not([class]) td) {
+    padding: 12px 14px;
+  }
+}

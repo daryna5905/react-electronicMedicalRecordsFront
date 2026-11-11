@@ -1,0 +1,91 @@
+.row {
+  border-top: 1px solid #e8efed;
+  transition: background 140ms ease;
+}
+
+.row:hover {
+  background: #f8fbfa;
+}
+
+.cell {
+  padding: 17px 20px;
+  color: #344c47;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.notes {
+  max-width: 300px;
+  color: #60736e;
+  line-height: 1.45;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.editLink,
+.deleteButton {
+  display: inline-flex;
+  min-height: 36px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 650;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background 140ms ease,
+    border-color 140ms ease;
+}
+
+.editLink {
+  border-color: #c9e2dd;
+  background: #f1f8f6;
+  color: #087f75;
+}
+
+.editLink:hover {
+  border-color: #9cc9c0;
+  background: #e6f4f1;
+}
+
+.deleteButton {
+  border-color: #f0d7d3;
+  background: #fff8f7;
+  color: #a4493d;
+}
+
+.deleteButton:hover:not(:disabled) {
+  border-color: #e8b8b0;
+  background: #fff0ed;
+}
+
+.deleteButton:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.editLink:focus-visible,
+.deleteButton:focus-visible {
+  outline: 3px solid #80c9bd;
+  outline-offset: 2px;
+}
+
+@media (max-width: 680px) {
+  .cell {
+    padding: 14px 15px;
+  }
+
+  .actions {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

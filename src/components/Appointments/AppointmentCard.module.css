@@ -1,0 +1,78 @@
+:global(form:has(select[name='patientId'])) {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: min(100% - 40px, 560px);
+  box-sizing: border-box;
+  margin: 0 auto 48px;
+  padding: 28px;
+  border: 1px solid #e0ebe8;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 16px 40px rgba(27, 70, 63, 0.07);
+  color: #233b38;
+  text-align: left;
+}
+
+:global(form:has(select[name='patientId']) label) {
+  margin-top: 4px;
+  color: #526a65;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+:global(form:has(select[name='patientId']) input),
+:global(form:has(select[name='patientId']) select) {
+  width: 100%;
+  min-height: 44px;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border: 1px solid #cbdcd8;
+  border-radius: 6px;
+  background: #fff;
+  color: #233b38;
+  font: inherit;
+}
+
+:global(form:has(select[name='patientId']) input:focus-visible),
+:global(form:has(select[name='patientId']) select:focus-visible) {
+  border-color: #087f75;
+  outline: 3px solid rgba(8, 127, 117, 0.18);
+  outline-offset: 1px;
+}
+
+:global(form:has(select[name='patientId']) button) {
+  min-height: 44px;
+  margin-top: 8px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 6px;
+  background: #087f75;
+  color: #fff;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 150ms ease;
+}
+
+:global(form:has(select[name='patientId']) button:hover:not(:disabled)) {
+  background: #066a62;
+}
+
+:global(form:has(select[name='patientId']) button:focus-visible) {
+  outline: 3px solid #80c9bd;
+  outline-offset: 3px;
+}
+
+:global(form:has(select[name='patientId']) button:disabled) {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+@media (max-width: 600px) {
+  :global(form:has(select[name='patientId'])) {
+    width: calc(100% - 32px);
+    padding: 20px;
+  }
+}

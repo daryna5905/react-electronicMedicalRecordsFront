@@ -1,0 +1,50 @@
+.layout {
+  flex: 1;
+  min-width: 0;
+  background: #f4f8f7;
+  color: #233b38;
+  color-scheme: light;
+}
+
+:global(body:has(nav a[href='/'].active)) .layout > h1,
+:global(body:has(nav a[href='/about'].active)) .layout > h1 {
+  width: min(100% - 40px, 1120px);
+  box-sizing: border-box;
+  margin: 48px auto;
+  padding: 22px 26px;
+  border-left: 4px solid #087f75;
+  border-radius: 0 8px 8px 0;
+  background: #fff;
+  box-shadow: 0 12px 32px rgba(27, 70, 63, 0.06);
+  color: #173c37;
+  font-size: 36px;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+:global(body:has(nav a[href='/'].active)) .layout > p,
+:global(body:has(nav a[href='/about'].active)) .layout > p {
+  width: min(100% - 40px, 1120px);
+  box-sizing: border-box;
+  margin: -28px auto 48px;
+  padding: 0 26px;
+  color: #52635f;
+  text-align: left;
+}
+
+@media (max-width: 680px) {
+  :global(body:has(nav a[href='/'].active)) .layout > h1,
+  :global(body:has(nav a[href='/about'].active)) .layout > h1 {
+    width: calc(100% - 32px);
+    margin: 32px auto;
+    padding: 18px 20px;
+    font-size: 28px;
+  }
+
+  :global(body:has(nav a[href='/'].active)) .layout > p,
+  :global(body:has(nav a[href='/about'].active)) .layout > p {
+    width: calc(100% - 32px);
+    margin-top: -18px;
+    padding: 0 20px;
+  }
+}
